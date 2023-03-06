@@ -1,13 +1,29 @@
-const primeiraLi = document.querySelector('li');
-const primeiraUl = document.querySelector('ul');
-const linkInterno = document.querySelector('[href^="#"]');
-const animaisImg = document.querySelectorAll('.animais img');
+function linha() {
+  console.log('------------------------------------------------------------------------------');
+}
 
+// Mostre no console cada parágrado do site
 
-const gridSectionHtml = document.getElementsByClassName('grid-section');
-const gridSectionNode = document.querySelectorAll('.grid-section');
+const p = document.querySelectorAll('p');
+p.forEach((p) => console.log(p));
 
-primeiraUl.classList.add('grid-section');
+linha();
+// Mostre o texto dos parágrafos no console
 
-console.log(gridSectionHtml);
-console.log(gridSectionNode);
+p.forEach((p) => console.log(p.innerText));
+
+linha();
+// Como corrigir os erros abaixo:
+const imgs = document.querySelectorAll('img');
+
+imgs.forEach((item, index) => {
+  console.log(item, index);
+});
+linha();
+let i = 0;
+imgs.forEach(() => {
+  console.log(i++);
+});
+linha();
+imgs.forEach(() => i++);
+
